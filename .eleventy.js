@@ -21,6 +21,7 @@ module.exports = function (config) {
       "assets/js/bootstrap.js",
     "node_modules/@midzer/tobii/dist/tobii.min.js": "assets/js/lightbox.js",
     "src/assets/js": "assets/js",
+    "src/assets/downloads": "assets/downloads",
   });
 
   // Add PDF passthrough
