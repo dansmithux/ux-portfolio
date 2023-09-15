@@ -1,0 +1,38 @@
+.btn {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: background .2s ease-in-out;
+
+
+    & > i.material-icons {
+      transition: transform .2s ease-in-out;
+    }
+
+    &:hover > {
+      i.material-icons {
+        transform: scale(1.25);
+        transition: transform .2s ease-in-out;
+            transition-delay: .0525s;
+      }
+    }
+
+}
+
+a.btn.btn-outline-black {
+    color: $black;
+    border-color: $black;
+    &:hover {
+        background-color: $black;
+        color: #fff;
+    }
+}
+
+
+a.btn.btn-outline-white {
+    color: #fff;
+    border-color: #fff;
+    &:hover {
+        color: $black;
+        border-color: $black;
+    }
+}

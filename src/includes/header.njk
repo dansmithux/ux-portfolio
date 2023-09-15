@@ -1,0 +1,42 @@
+<header class="sticky-top">
+  <nav class="navbar navbar-{{ navbarColor|default("dark") }} navbar-expand-lg" aria-label="Main">
+    <div class="container">
+      <a href="/" class="navbar-brand d-inline-flex text-uppercase">Dan Smith&nbsp;&nbsp;<span class="text-primary">UX Designer</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="material-icons icon-2x" aria-hidden="true">menu</i>
+      </button>
+      <div class="collapse navbar-collapse text-uppercase" id="navbar">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a href="{{ root }}pages" class="nav-link{{ ' active' if 'pages' in page.url }}">Pages</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ root }}docs/intro" class="nav-link{{ ' active' if 'docs' in page.url }}">Docs</a>
+          </li>
+
+
+
+          <li class="nav-item">
+              <a href="{{ root }}profile" class="nav-link{{ ' active' if 'profile' in page.url }}">Profile</a>
+          </li>
+
+          <li class="nav-item">
+              <a href="{{ root }}work" class="nav-link{{ ' active' if 'work' in page.url }}">Work</a>
+          </li>
+
+          <li class="nav-item">
+              <a href="{{ root }}portfolio" class="nav-link{{ ' active' if 'portfolio' in page.url }}">Portfolio</a>
+          </li>
+
+          <li class="nav-item">
+              <a href="{{ root }}contact" class="nav-link{{ ' active' if 'contact' in page.url }}">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
