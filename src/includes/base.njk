@@ -8,6 +8,10 @@
 {{ content | safe -}}
 </main>
 
+{% if 'contact' not in page.url %}
+{% include "get-in-touch.njk" -%}
+{% endif %}
+
 {% include "footer.njk" -%}
 </body>
 </html>
