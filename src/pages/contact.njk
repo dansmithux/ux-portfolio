@@ -29,18 +29,18 @@ permalink: /contact.html
             <div class="row justify-content-center py-4 py-lg-5">
                 <div class="col-md-10 col-lg-8">
                     <p><em>Fields marked with <span class="text-danger">*</span> are required</em></p>
-                    <form id="contact-form" action="https://formspree.io/xaypjbro" method="POST" class="py-3">
+                    <form id="contact-form" name="contact-form" method="POST" data-netlify="true" class="py-3">
                         <div class="form-group">
                             <label for="inputName">Name <span class="text-danger">*</span></label>
-                            <input type="text" name="name" class="form-control" id="inputName" placeholder="Enter your name" required>
+                            <input type="text" name="name" class="form-control" id="inputName" placeholder="" required>
                         </div>
                         <div class="form-group mt-3">
                             <label for="inputEmail">Email <span class="text-danger">*</span></label>
-                            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Enter your email address" required>
+                            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="" required>
                         </div>
                         <div class="form-group mt-3">
                             <label for="messageTetxarea">Message <span class="text-danger">*</span></label>
-                            <textarea class="form-control" name="message" id="messageTetxarea" rows="3" placeholder="Enter your message" required></textarea>
+                            <textarea class="form-control" name="message" id="messageTetxarea" rows="3" placeholder="" required></textarea>
                         </div>
                         <div class="g-recaptcha form-group mt-3" data-sitekey="6LcIfxEaAAAAAF0bFGgasddwygDRMgmYagEdSu5n"></div>
                         <div class="mt-3">
