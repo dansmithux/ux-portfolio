@@ -8,14 +8,12 @@ header.sticky-top nav {
 }
 
 .profile-max-width {
-  @include media-breakpoint-down(md) {
   	width: 100%;
-    max-width: 300px;
-  }
+    max-width: 200px;
 }
 
 .text-center-tablet {
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     text-align: center;
 
     hr {
@@ -23,6 +21,23 @@ header.sticky-top nav {
     }
   }
 }
+
+.pattern-square:after {
+  background-image: url(/assets/img/pattern-square.svg);
+  background-position: top;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  -webkit-mask-image: linear-gradient(45deg,transparent 35%,#000 75%);
+  mask-image: linear-gradient(45deg,transparent 35%,#000 75%);
+  padding: 40px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
 
 // Hero animation
 .hero-animation .word {
@@ -44,8 +59,26 @@ header.sticky-top nav {
   width: 25%;
 }
 
+
 // ---
 
+
+// Google Sheets embed
+.embed-container {
+  position: relative;
+  padding-bottom: 59.27%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 
 .videoWrapper {

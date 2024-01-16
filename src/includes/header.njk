@@ -1,11 +1,19 @@
 <header class="sticky-top">
   <nav class="navbar navbar-{{ navbarColor|default("dark") }} navbar-expand-lg" aria-label="Main">
     <div class="container">
-      <a href="/" class="navbar-brand d-inline-flex text-uppercase">Dan Smith&nbsp;&nbsp;<span class="text-primary">UX Designer</span></a>
+
+      {% if page.url !== '/' %}
+        <a href="/" class="navbar-brand d-inline-flex text-uppercase text-primary">Dan Smith&nbsp;&nbsp;<span class="text-white">UX Engineer</span></a>
+      {% endif %}
+
+
 <!-- 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <i class="material-icons icon-2x" aria-hidden="true">menu</i>
       </button> -->
+
+
+
 
       <button class="navbar-toggler hamburger hamburger--spin" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="hamburger-box">
@@ -17,12 +25,12 @@
         <ul class="navbar-nav ms-auto">
 
           <li class="nav-item">
-              <a href="{{ root }}profile" class="nav-link{{ ' active' if 'profile' in page.url }}">Profile</a>
+              <a href="{{ root }}resume" class="nav-link{{ ' active' if 'resume' in page.url }}">R&eacute;sum&eacute;</a>
           </li>
 
 
           <li class="nav-item">
-              <a href="{{ root }}case-studies" class="nav-link{{ ' active' if 'case-studies' in page.url }}">Case Studies</a>
+              <a href="{{ root }}portfolio" class="nav-link{{ ' active' if 'portfolio' in page.url }}">Portfolio</a>
           </li>
 
 <!--           <li class="nav-item">
@@ -34,5 +42,3 @@
     </div>
   </nav>
 </header>
-
-

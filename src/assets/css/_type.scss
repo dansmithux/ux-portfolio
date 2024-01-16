@@ -2,12 +2,13 @@ html {
     font-size: 1rem;
 
     @include media-breakpoint-up(lg) {
-        font-size: 1.125rem;
+        font-size: 1.0625rem;
     }
 
     @include media-breakpoint-up(xl) {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
+
 }
 
 .font-serif {
@@ -49,6 +50,7 @@ figcaption.figure-caption {
 
 ul {
     list-style-type: square;
+    padding-left: 1rem;
 }
 
 .quote {
