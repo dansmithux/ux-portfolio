@@ -1,17 +1,17 @@
 .btn {
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: background .2s ease-in-out;
+    transition: background .15s ease-in-out;
 
 
     & > i.material-icons {
-      transition: transform .2s ease-in-out;
+      transition: transform .15s ease-in-out;
     }
 
     &:hover > {
       i.material-icons {
         transform: scale(1.25);
-        transition: transform .2s ease-in-out;
+        transition: transform .15s ease-in-out;
             transition-delay: .0525s;
       }
     }
