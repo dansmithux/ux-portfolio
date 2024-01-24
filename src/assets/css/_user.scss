@@ -26,6 +26,7 @@ header.sticky-top nav {
 .pattern-square:after {
   background-image: url(/assets/img/pattern-square.svg);
   background-position: top;
+  background-repeat: repeat;
   bottom: 0;
   content: "";
   height: 100%;
@@ -42,6 +43,7 @@ header.sticky-top nav {
 .pattern-square-light:after {
   background-image: url(/assets/img/pattern-square-light.svg);
   background-position: top;
+  background-repeat: repeat;
   bottom: 0;
   content: "";
   height: 100%;
@@ -77,7 +79,13 @@ header.sticky-top nav {
 }
 
 
-// ---
+
+
+
+
+
+// –––
+
 
 
 // Google Sheets embed
