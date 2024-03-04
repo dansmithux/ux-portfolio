@@ -27,6 +27,12 @@ header.sticky-top nav {
   mix-blend-mode: difference;
 }
 
+#cobe {
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+
 .pattern-square:after {
   background-image: url(/assets/img/pattern-square.svg);
   background-position: top;
