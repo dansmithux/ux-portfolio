@@ -1,9 +1,28 @@
 .accordion-button {
+
+  &:not(.collapsed) {
+    background-color: $light;
+    color: $dark !important;
+  }
+  &.collapsed {
+    background-color: $light;
+    color: $dark !important;
+    
+  }
+
+
   &:hover {
-    background-color: $dark;
+    background-color: $secondary;
+    color: $dark;
   }
 
   &:focus {
     outline: auto;
   }
+
+
+}
+.accordion-body {
+    background-color: $light;
+    color: $dark !important;
 }

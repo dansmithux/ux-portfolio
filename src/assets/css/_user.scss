@@ -1,5 +1,6 @@
-// Place your own CSS or SCSS below this line.
-// Place your own CSS or SCSS below this line.
+html {
+  overflow-x: hidden;
+}
 
 header.sticky-top nav {
 	background: rgba(14,14,14,.85) !important;
@@ -9,7 +10,7 @@ header.sticky-top nav {
 
 .profile-max-width {
   	width: 100%;
-    max-width: 200px;
+    max-width: 225px;
 }
 
 .text-center-tablet {
@@ -22,6 +23,9 @@ header.sticky-top nav {
   }
 }
 
+.difference {
+  mix-blend-mode: difference;
+}
 
 .pattern-square:after {
   background-image: url(/assets/img/pattern-square.svg);
@@ -56,6 +60,47 @@ header.sticky-top nav {
   top: 0;
   z-index: -1;
 }
+
+
+
+.hero-circle {
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  background-color: rgba($primary, .75);
+  position: absolute;
+  right: -20%; 
+  top: -5%;
+  z-index: -1;
+}
+
+
+.link-circle {
+  position: absolute;
+  background-color: $primary;
+  height: 0;
+  width: 0%;
+  border-radius: 50%;
+  z-index: -1;
+  transition: width 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
+  margin-top: -2.5rem;
+  opacity: 0;
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:hover .link-circle {
+      width: 95%;
+      padding-top: 95%;
+      opacity: 1;
+    }
+  }
+}
+
+
 
 
 // Hero animation
@@ -154,6 +199,10 @@ a.clipboard {
     hsl(0 0% 0% / 1) 80%,
     hsl(0 0% 0% / 0)
   );
+
+   &:hover .marquee__group {
+    animation-play-state: paused;
+  }
 }
 
 .marquee__group {
@@ -229,3 +278,4 @@ a.clipboard {
     visibility: hidden;
   }
 }
+

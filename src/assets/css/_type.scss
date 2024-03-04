@@ -2,12 +2,8 @@ html {
     font-size: 1rem;
 
     @include media-breakpoint-up(lg) {
-        font-size: 1.0625rem;
+        font-size: 1.05rem;
     }
-
-    // @include media-breakpoint-up(xl) {
-    //     font-size: 1.125rem;
-    // }
 
 }
 

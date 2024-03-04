@@ -105,11 +105,12 @@ $grid-gutter-width: 2rem;
 // Accordion
 
 $accordion-padding-y: 1.25rem;
-$accordion-border-color: $gray-800;
-$accordion-button-active-bg: $dark;
-$accordion-button-active-color: $white;
+$accordion-border-color: $gray-300;
+$accordion-button-active-bg: $light;
+$accordion-button-active-color: $dark;
 $accordion-button-focus-box-shadow: none;
-$accordion-icon-active-color: $white;
+$accordion-icon-color: $dark;
+$accordion-icon-active-color: $dark;
 
 // Alerts
 
