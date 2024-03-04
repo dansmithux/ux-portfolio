@@ -5,80 +5,130 @@ description: Focus is a clean portfolio theme for Bootstrap.
 permalink: /
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Hero -->
 <div class="container py-5 pattern-square">
 
-    <h1 class="hero-animation pt-4">
-        <span class="text-wrapper">
-            <div class="font-sans-serif display-3">
-                <span class="word text-primary difference">DAN </span>
-                <span class="word text-primary difference">SMITH</span>
+    <div class="row">
+
+        <div class="col-lg-7">
+            
+
+            <h1 class="hero-animation pt-4">
+                <span class="text-wrapper">
+                    <div class="font-sans-serif display-3">
+                        <span class="word text-primary difference">DAN </span>
+                        <span class="word text-primary difference">SMITH</span>
+                    </div>
+
+                    <div class="font-sans-serif fs-3">
+                        <span class="word">UX </span>
+                        <span class="word">ENGINEER</span>
+                    </div>
+                </span>
+            </h1>
+
+            <div class="border border-3 border-white w-15 my-4 hero-animation-line"></div>
+
+            <div class="row hero-animation-body">
+                <div class="col-lg-11">
+
+                    <p class="font-serif fs-5 mb-5 text-secondary difference">
+                        Microsoft engineering alumnus with graduate degree in UX design, UX Master Certificate & over 8 years of experience. I focus on promoting human ease & efficiency, bridging design & engineering, and using technology to inspire curiosity & growth.
+                    </p>
+
+                </div>
             </div>
 
-            <div class="font-sans-serif fs-3">
-                <span class="word">UX </span>
-                <span class="word">ENGINEER</span>
-            </div>
-        </span>
-    </h1>
-
-    <div class="border border-3 border-white w-15 my-4 hero-animation-line"></div>
-
-    <div class="row hero-animation-body">
-        <div class="col-lg-8">
-
-            <p class="font-serif fs-5 mb-5 text-secondary difference">
-                Microsoft engineering alumnus with graduate degree in UX design, UX Master Certificate & over 8 years of experience. I focus on promoting human ease & efficiency, bridging design & engineering, and using technology to inspire curiosity & growth.
-            </p>
+            <a href="resume.html" class="btn btn-primary btn-sm align-middle hero-animation-body mb-5 difference"><span class="align-text-top">Read more</span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i></a>
 
         </div>
+
+        <div class="col-lg-5 ps-0 ps-xl-6">
+                    
+            <canvas
+              id="cobe"
+              style="width: 500px; height: 500px"
+              width="500"
+              height="500"
+              class=""
+            ></canvas>
+
+            <script type="module">
+              import createGlobe from 'https://cdn.skypack.dev/cobe'
+
+              let phi = 0
+              let canvas = document.getElementById("cobe")
+
+              const globe = createGlobe(canvas, {
+                devicePixelRatio: 2,
+                width: 1000,
+                height: 1000,
+                phi: 0,
+                theta: 0,
+                dark: 1.1,
+                diffuse: 1.2,
+                scale: 1,
+                mapSamples: 16000,
+                mapBrightness: 6,
+                baseColor: [1, 1, 1],
+                markerColor: [38 / 255, 166 / 255, 91 / 255],
+                glowColor: [1.2, 1.2, 1.2],
+                offset: [0, 0],
+                markers: [
+                  { location: [47.6061, -122.3328], size: 0.1 }
+                ],
+                onRender: (state) => {
+                  // Called on every animation frame.
+                  // `state` will be an empty object, return updated params.
+                  state.phi = phi
+                  phi += 0.001
+                },
+              })
+            </script>
+        </div>
+        
     </div>
 
-    <a href="resume.html" class="btn btn-primary btn-sm align-middle hero-animation-body mb-5 difference"><span class="align-text-top">Read more</span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i></a>
-
-    <canvas
-      id="cobe"
-      style="width: 500px; height: 500px"
-      width="500"
-      height="500"
-      class="hero-animation-body"
-    ></canvas>
-
-    <script type="module">
-      import createGlobe from 'https://cdn.skypack.dev/cobe'
-
-      let phi = 0
-      let canvas = document.getElementById("cobe")
-
-      const globe = createGlobe(canvas, {
-        devicePixelRatio: 2,
-        width: 1000,
-        height: 1000,
-        phi: 0,
-        theta: 0,
-        dark: 1.1,
-        diffuse: 1.2,
-        scale: 1,
-        mapSamples: 16000,
-        mapBrightness: 6,
-        baseColor: [1, 1, 1],
-        markerColor: [38 / 255, 166 / 255, 91 / 255],
-        glowColor: [1.2, 1.2, 1.2],
-        offset: [0, 0],
-        markers: [
-          { location: [47.6061, -122.3328], size: 0.1 }
-        ],
-        onRender: (state) => {
-          // Called on every animation frame.
-          // `state` will be an empty object, return updated params.
-          state.phi = phi
-          phi += 0.001
-        },
-      })
-    </script>
-    <!-- <div class="hero-circle"></div> -->
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
