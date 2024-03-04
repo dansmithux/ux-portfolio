@@ -1,33 +1,15 @@
 ---
 layout: base
 title: Home
-description: Focus is a clean portfolio theme for Bootstrap.
+description: 
 permalink: /
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Hero -->
 <div class="container py-5 pattern-square">
-
     <div class="row">
-
+        
         <div class="col-lg-7">
-            
 
             <h1 class="hero-animation pt-4">
                 <span class="text-wrapper">
@@ -59,7 +41,7 @@ permalink: /
 
         </div>
 
-        <div class="col-lg-5 ps-0 ps-xl-6">
+        <div class="col-lg-5">
                     
             <canvas
               id="cobe"
@@ -106,32 +88,6 @@ permalink: /
     </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Logos -->
 <div class="bg-light text-black">
@@ -228,7 +184,6 @@ permalink: /
 
 </div>
 
-
 <script>
     anime.timeline({loop: false})
     .add({
@@ -253,7 +208,15 @@ permalink: /
         translateY: [18,0],
         opacity: [0,1],
         easing: "easeOutExpo",
-        duration: 800,
+        duration: 300,
         delay: (el, i, l) => 10 * (l - i)
+    }).add({
+        targets: '#cobe',
+        scale: [0,1],
+        opacity: [0,1],
+        translateX: [-300,0],
+        translateY: [-100, 0],
+        easing: "easeOutExpo",
+        duration: 500
     });
 </script>
