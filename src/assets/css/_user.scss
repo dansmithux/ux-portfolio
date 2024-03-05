@@ -23,11 +23,6 @@ header.sticky-top nav {
   }
 }
 
-.difference {
-  mix-blend-mode: difference;
-}
-
-
 .pattern-square:after {
   background-image: url(/assets/img/pattern-square.svg);
   background-position: top;
@@ -64,69 +59,60 @@ header.sticky-top nav {
 
 
 
-.hero-circle {
-  height: 800px;
-  width: 800px;
-  border-radius: 50%;
-  background-color: rgba($primary, .75);
-  position: absolute;
-  right: -20%; 
-  top: -5%;
-  z-index: -1;
-}
+
 
 @include media-breakpoint-up(lg) {
-  .link-circle {
+  // Define base styles for link-circle common between .link-circle and .case-study .link-circle
+  %link-circle-base {
     position: absolute;
     background-color: $primary;
-    height: 0;
-    width: 0%;
+    height: 14rem;
+    width: 14rem;
     border-radius: 50%;
     z-index: -1;
-    transition: width 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
-    margin-top: -2.5rem;
+    transition: transform 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
     opacity: 0;
 
-    &-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-
-      &:hover .link-circle {
-        width: 95%;
-        padding-top: 95%;
-        opacity: 1;
-      }
+    @include media-breakpoint-up(xl) {
+      height: 16rem;
+      width: 16rem;
     }
   }
-}
 
+  // Define base styles for link-circle-container common to both
+  %link-circle-container-base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    &:hover .link-circle {
+      transform: scale(1.25);
+      opacity: 1;
+    }
+  }
+  .link-circle {
+    @extend %link-circle-base;
+    margin-top: -2.5rem;
+    
+    &-container {
+      @extend %link-circle-container-base;
+    }
+  }
 
-@include media-breakpoint-up(lg) {
-  .case-study {
-    .link-circle {
-      position: absolute;
-      background-color: $primary;
-      height: 0;
-      width: 0%;
-      border-radius: 50%;
-      z-index: -1;
-      transition: width 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
-      margin-top: -1.75rem;
-      opacity: 0;
-      &-container {
-        position: relative;
-        z-index: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:hover .link-circle {
-          width: 95%;
-          padding-top: 95%;
-          opacity: 1;
-        }
-      }
+  .case-study .link-circle {
+    @extend %link-circle-base;
+    margin-top: -1.75rem;
+    height: 20rem;
+    width: 20rem;
+    @include media-breakpoint-up(xl) {
+      height: 25rem;
+      width: 25rem;
+    }
+    
+    &-container {
+      @extend %link-circle-container-base;
+      z-index: 0; // Specific to .case-study .link-circle-container
     }
   }
 }
@@ -224,6 +210,8 @@ a.clipboard {
   display: flex;
   overflow: hidden;
   user-select: none;
+  cursor: pointer;
+
   gap: var(--gap);
   mask-image: linear-gradient(
     var(--mask-direction, to right),
@@ -234,7 +222,7 @@ a.clipboard {
   );
 
    &:hover .marquee__group {
-    animation-play-state: paused;
+    animation-play-state: running;
   }
 }
 
@@ -246,6 +234,7 @@ a.clipboard {
   gap: var(--gap);
   min-width: 100%;
   animation: scroll-x var(--duration) linear infinite;
+  animation-play-state: paused;
 }
 
 @media (prefers-reduced-motion: reduce) {
