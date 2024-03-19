@@ -21,6 +21,34 @@ permalink: /portfolio.html
   <div class="py-6">
     <div class="container pattern-square-light">
 
+
+
+      <div class="case-study row justify-content-lg-between align-items-center gy-4 py-5 py-lg-6" id="midimorph">
+        <div class="col-lg-6">
+          <a href="/midimorph/" class="link-circle-container">
+            <figure class="mb-0">
+              <img src="assets/img/midimorph-mac.png" alt="MIDIMorph screenshot" class="w-100">
+            </figure>
+            <div class="link-circle"></div>
+          </a>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="fw-normal mb-0">MIDIMorph</h2>
+
+          <div class="mt-2 mb-3">
+            <span class="badge bg-primary">Research</span>
+            <span class="badge bg-primary">Design</span>
+            <span class="badge bg-primary">Engineering</span>
+          </div>
+
+          <p class="text-black">Simple microservice app that provides fast & free MIDI file transposition and tempo adjustment for&nbsp;musicians</p>
+          <a href="/midimorph/" class="btn btn-outline-dark btn-sm">
+            <span class="align-text-top">View case study</span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i>
+          </a>
+        </div>
+      </div>
+
+
       <div class="case-study row justify-content-lg-between align-items-center gy-4 py-5 py-lg-6" id="a1f">
         <div class="col-lg-6">
           <a href="/alpha-1-foundation/" class="link-circle-container">
@@ -45,6 +73,37 @@ permalink: /portfolio.html
           </a>
         </div>
       </div>
+
+
+
+      <div class="case-study row justify-content-lg-between align-items-center gy-4 py-5 py-lg-6" id="carbon-titans">
+        <div class="col-lg-6">
+          <a href="/carbon-titans/" class="link-circle-container">
+            <figure class="mb-0">
+              <img src="assets/img/carbon-titans-mac.png" alt="Carbon Titans website redesign" class="w-100">
+            </figure>
+            <div class="link-circle"></div>
+          </a>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="fw-normal mb-0">Carbon Titans</h2>
+
+          <div class="mt-2 mb-3">
+            <span class="badge bg-primary">Design</span>
+            <span class="badge bg-primary">Engineering</span>
+          </div>
+
+          <p class="text-black">Website redesign and rebuild for company focused on planting redwood trees to combat climate&nbsp;change</p>
+          <a href="/carbon-titans/" class="btn btn-outline-dark btn-sm">
+            <span class="align-text-top">View case study</span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i>
+          </a>
+        </div>
+      </div>
+
+
+
+
+
 
 
 
@@ -73,6 +132,9 @@ permalink: /portfolio.html
       </div>
 
 
+
+
+
       <div class="case-study row justify-content-lg-between align-items-center gy-4 py-5 py-lg-6" id="cyv">
         <div class="col-lg-6">
           <a href="/clear-your-view/" class="link-circle-container">
@@ -96,15 +158,17 @@ permalink: /portfolio.html
         </div>
       </div>
 
+
+
+
+
       <div class="case-study row justify-content-lg-between align-items-center gy-4 py-5 py-lg-6" id="vocalio">
         <div class="col-lg-6">
-          <a href="/vocalio/" class="d-inline-block">
-            <figure class="img-overlay mb-0">
-              <img src="assets/img/vocalio-thumb.png" alt="Vocalio project" class="img-thumbnail border-gray border-1" width="800" height="550">
-              <div class="img-hover">
-                <div class="img-text">View case study</div>
-              </div>
+          <a href="/vocalio/" class="link-circle-container">
+            <figure class="mb-0">
+              <img src="assets/img/vocalio-mac.png" alt="Vocalio screenshot" class="w-100">
             </figure>
+            <div class="link-circle"></div>
           </a>
         </div>
         <div class="col-lg-5">
@@ -123,15 +187,16 @@ permalink: /portfolio.html
       </div>
 
 
+
+
+
       <div class="case-study row justify-content-lg-between align-items-center gy-4 py-5 py-lg-6" id="sustainabowl">
         <div class="col-lg-6">
-          <a href="/sustain-a-bowl/" class="d-inline-block">
-            <figure class="img-overlay mb-0">
-              <img src="assets/img/sustainabowl-thumb.png" alt="Sustain-A-Bowl project" class="img-thumbnail border-gray border-1" width="800" height="550">
-              <div class="img-hover">
-                <p class="img-text"><span class="align-text-top">View case study</span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i></p>
-              </div>
+          <a href="/sustain-a-bowl/" class="link-circle-container">
+            <figure class="mb-0">
+              <img src="assets/img/sustain-a-bowl-mac.png" alt="Sustain-A-Bowl screenshot" class="w-100">
             </figure>
+            <div class="link-circle"></div>
           </a>
         </div>
         <div class="col-lg-5">
@@ -143,7 +208,7 @@ permalink: /portfolio.html
           </div>
 
           <p class="text-black">Mobile web app for a healthy, sustainably-sourced food&nbsp;truck</p>
-          <a href="/sustain-a-bowl/" class="btn btn-outline-dark btn-sm">
+          <a href="/vocalio/" class="btn btn-outline-dark btn-sm">
             <span class="align-text-top">View case study</span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i>
           </a>
         </div>
@@ -197,9 +262,28 @@ permalink: /portfolio.html
   //   offset: '50%'
   // });
 
+var a1f = new Waypoint.Inview({
+  element: $('#midimorph'),
+  enter: function(direction) {
+    $(this.element).animate({ opacity: 1 });
+  },
+  exited: function(direction) {
+    $(this.element).animate({ opacity: 0 });
+  }
+})
 
 var a1f = new Waypoint.Inview({
   element: $('#a1f'),
+  enter: function(direction) {
+    $(this.element).animate({ opacity: 1 });
+  },
+  exited: function(direction) {
+    $(this.element).animate({ opacity: 0 });
+  }
+})
+
+var carbonTitans = new Waypoint.Inview({
+  element: $('#carbon-titans'),
   enter: function(direction) {
     $(this.element).animate({ opacity: 1 });
   },
